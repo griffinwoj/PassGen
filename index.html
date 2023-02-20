@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- 
+Gradient Animator by Ian Forrest (https://www.gradient-animator.com/)
+Source code: https://github.com/ianforrest/gradient-animator
+-->
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Password Generator</title>
+        <link rel="stylesheet" href="style.css" />
+
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <header>
+                <h1>Password Generator</h1>
+            </header>
+            <div class="card">
+                <div class="card-header">
+                    <h2>The Coolest Password</h2>
+                </div>
+                <div class="card-body">
+                    <textarea readonly id="password" placeholder="Click Generate
+                        Password!" aria-label="Generated Password"></textarea>
+                </div>
+                <div class="card-footer"></div>
+                <div class="setting">
+                    <label for="length">Length for Password </label>
+                    <input type="number" id="length" min="8" max="128" />
+                </div>
+                <div>
+                    <div class="setting">
+                        <label for="uppercase">Uppercase Letters !</label>
+                        <input type="checkbox" id="uppercase" checked />
+                    </div>
+                    <div class="setting">
+                        <label for="lowercase">Lowercase Letters !</label>
+                        <input type="checkbox" id="lowercase" checked />
+                    </div>
+                    <div class="setting">
+                        <label for="number">Numbers !</label>
+                        <input type="checkbox" id="number" checked />
+                    </div>
+                    <div>
+                        <div class="setting">
+                            <label for="Special">Special Characters</label>
+                            <input type="checkbox" id="special-characters"
+                                checked />
+                        </div>
+                        <div class="setting">
+                            <button id="click" class="btn">Generate Password</button>
+                        </div>
+                    </div>
+                </div>
+                <script src="script.js"></script>
+            </body>
+
+        </html>
