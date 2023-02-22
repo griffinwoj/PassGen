@@ -1,25 +1,20 @@
 const generateBtn = document.querySelector("#click");
-// if you are reading this text...this has been the most frustrating project I have yet to worked on. Be well..
+generateBtn.addEventListener("click", writePassword);
+
 function writePassword() {
     const password = generatePassword();
     const passwordText = document.querySelector("#password");
     passwordText.value = password;
 }
-generateBtn.addEventListener("click", writePassword);
-console.log(generateBtn);
-
+// if you are reading this, i am sorry, this has been the most difficult project
 function generatePassword() {
     let allChars = "";
-    let passwordLength = 0;
+    let passwordLength = document.querySelector("#length").value;
 
-    const lengthCheckbox = document.querySelector("#length");
-    if (lengthCheckbox.checked) {
-        const passwordLengthInput = document.querySelector("#passwordlength");
-        if (!isNaN(parseInt(passwordLengthInput.value))) {
-            passwordLength = parseInt(passwordLengthInput.value);
-
-        }
-
+    if (passwordLength < 8) {
+        passwordLength = 8;
+    } else if (passwordLength > 128) {
+        passwordLength = 128;
     }
 
     const uppercaseCheckbox = document.querySelector("#uppercase");
@@ -49,4 +44,3 @@ function generatePassword() {
 
     return password;
 }
-//I spent hours upon hours working on this project
